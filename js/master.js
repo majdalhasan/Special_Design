@@ -1,7 +1,7 @@
 //Toggle Spin Class On Icon
 document.querySelector(".toggle-settings i").onclick = function () {
   //toggle class fa-spin for rotation on self
-  this.classList.toggle("fa-spin");
+  this.classList.toggle("rotate");
 
 
   //toggle class open on main settings box

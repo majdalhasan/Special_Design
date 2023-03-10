@@ -30,6 +30,9 @@ body {
   padding: 8px 0;
   width: 30px;
 }
+.srttings-box .toggle-settings i.rotate {
+  animation: rotate 5s infinite;
+}
 .srttings-box .settings-container {
   
 }
@@ -105,3 +108,16 @@ body {
   margin: 0;
 }
 /* End Landing Page */
+/* Start Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/* End Animation */
