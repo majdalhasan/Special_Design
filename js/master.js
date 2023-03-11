@@ -5,8 +5,25 @@ document.querySelector(".toggle-settings i").onclick = function () {
 
 
   //toggle class open on main settings box
-  document.querySelector(".srttings-box").classList.toggle("open");
+  document.querySelector(".settings-box").classList.toggle("open");
 };
+
+//Switch Colors
+const colorsLi = document.querySelectorAll(".colors-list li");
+
+//Loop On All List Items
+colorsLi.forEach(li => {
+
+  //Click On Every List Items
+  li.addEventListener("click", (e) => {
+
+    //Set Color On Root
+    document.documentElement.style.setProperty('--main-color',e.target.dataset.color);
+
+  });
+
+});
+
 
 //Select Landing Page Element
 let landingPage=document.querySelector(".landing-page");
