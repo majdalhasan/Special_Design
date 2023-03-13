@@ -1,6 +1,9 @@
 :root {
   --main-color:#ff9800;
 }
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -34,7 +37,10 @@ body {
   animation: rotate 5s infinite;
 }
 .settings-box .option-box {
-  padding: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
 }
 .settings-box .option-box h4 {
   margin: 0;
@@ -44,18 +50,20 @@ body {
   list-style: none;
   text-align: center;
   padding: 0;
+  margin: 10px 0 0;
 }
 .settings-box .option-box .colors-list li {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: #333;
   border-radius: 50%;
   cursor: pointer;
   opacity: .5;
   display: inline-block;
+  border: 3px solid #eee;
 }
 .settings-box .option-box .colors-list li.active {
-  opacity: 1;
+  border-color: #fff;
 }
 .settings-box .option-box .colors-list li:first-child {
   background-color: #ff9800;
@@ -130,6 +138,7 @@ body {
   z-index: 2;
   color: white;
   text-align: center;
+  width: 100%;
 }
 .introduction-text h1 {
   font-size: 34px;
