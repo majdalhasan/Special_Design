@@ -45,6 +45,7 @@ body {
 .settings-box .option-box h4 {
   margin: 0;
   color: #666;
+  font-size: 14px;
 }
 .settings-box .option-box .colors-list {
   list-style: none;
@@ -79,6 +80,23 @@ body {
 }
 .settings-box .option-box .colors-list li:nth-child(5) {
   background-color: #4CAF50;
+}
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no {
+  width: 50px;
+  background-color: #009688;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  opacity: .5;
+  cursor: pointer;
+}
+.settings-box .random-backgrounds span.active {
+  opacity: 1;
 }
 /* End Settings Box */
 /* Start Landing Page */
