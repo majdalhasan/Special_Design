@@ -23,9 +23,14 @@ if (mainColors !== null) {
   });
 
 
-
-
 }
+
+//Random Background Option
+let backgroundOption = true;
+
+
+//Variable To Control The Background Interval
+let backgroundInterval;
 
 
 //Toggle Spin Class On Icon
@@ -87,6 +92,15 @@ randomBackEl.forEach(span => {
     //Add Active Class On Self
     e.target.classList.add("active");
 
+    if (e.target.dataset.background === 'yes') {
+
+      backgroundOption = true;
+      randomizeImgs();
+    } else {
+      backgroundOption = false;
+      clearInterval(backgroundInterval);
+    }
+
   });
 
 });
@@ -98,10 +112,18 @@ let landingPage=document.querySelector(".landing-page");
 //Get Array Of Imgs
 let imgsArray=["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg"];
 
-setInterval(() => {
-//Get Random Number
-let randomNumber = Math.floor(Math.random() * imgsArray.length);
 
-//Change Background Image Url
-landingPage.style.backgroundImage = 'url("imgs/'+ imgsArray[randomNumber] +'")';
-}, 10000)
+//Function Randomize Imgs
+function randomizeImgs() {
+
+  if (backgroundOption === true) {
+    
+    backgroundInterval = setInterval(() => {
+      //Get Random Number
+      let randomNumber = Math.floor(Math.random() * imgsArray.length);
+      
+      //Change Background Image Url
+      landingPage.style.backgroundImage = 'url("imgs/'+ imgsArray[randomNumber] +'")';
+      }, 10000)
+  }
+}
