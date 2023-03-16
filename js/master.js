@@ -33,6 +33,42 @@ let backgroundOption = true;
 let backgroundInterval;
 
 
+//Check If There's Local Storage Random Background Item
+let backgroundLocalItem = localStorage.getItem("background_option");
+
+//Check If Random Background Local Storage Is Not Empty
+if (backgroundLocalItem !== null) {
+
+  if (backgroundLocalItem === 'true') {
+
+    backgroundOption = true;
+
+  }else {
+
+    backgroundOption = false;
+
+  }
+
+  //Remove Active Class From All Spans
+  document.querySelectorAll(".random-backgrounds span").forEach(element=> {
+
+    element.classList.remove("active");
+
+  });
+
+  if (backgroundLocalItem === 'true') {
+
+    document.querySelector(".random-backgrounds .yes").classList.add("active");
+
+  }else {
+
+    document.querySelector(".random-backgrounds .no").classList.add("active");
+
+  }
+
+}
+
+
 //Toggle Spin Class On Icon
 document.querySelector(".toggle-settings i").onclick = function () {
   //toggle class fa-spin for rotation on self
@@ -96,9 +132,11 @@ randomBackEl.forEach(span => {
 
       backgroundOption = true;
       randomizeImgs();
+      localStorage.setItem("background_option", true);
     } else {
       backgroundOption = false;
       clearInterval(backgroundInterval);
+      localStorage.setItem("background_option", false);
     }
 
   });
@@ -124,6 +162,6 @@ function randomizeImgs() {
       
       //Change Background Image Url
       landingPage.style.backgroundImage = 'url("imgs/'+ imgsArray[randomNumber] +'")';
-      }, 10000)
+      }, 7000)
   }
 }
