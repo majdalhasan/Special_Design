@@ -244,9 +244,10 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 45%;
+  width: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: all .5s;
 }
 /* End Skills */
 /* Start Animation */
