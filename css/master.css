@@ -255,17 +255,17 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.gallery h2 {
+.gallery .container h2 {
   font-weight: bold;
   font-size: 30px;
   color: var(--main-color);
   margin: 0 0 50px;
   text-align: center;
 }
-.gallery .images-box {
+.gallery .container .images-box {
   text-align: center;
 }
-.gallery .images-box img {
+.gallery .container .images-box img {
   width: 200px;
   padding: 3px;
   background-color: #f6f6f6;
