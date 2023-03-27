@@ -273,7 +273,28 @@ body {
   margin: 5px;
   cursor: pointer;
 }
-
+.popup-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.popup-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1001;
+}
+.popup-box img {
+  max-width: 100%;
+}
 /* End Gallery */
 /* Start Animation */
 @keyframes rotate {
