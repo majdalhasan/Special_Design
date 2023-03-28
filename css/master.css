@@ -292,8 +292,30 @@ body {
   padding: 20px;
   z-index: 1001;
 }
+.popup-box h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
 .popup-box img {
   max-width: 100%;
+}
+.close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: var(--main-color);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  font-weight: bold;
+  font-family: Arial, Tahoma;
 }
 /* End Gallery */
 /* Start Animation */
