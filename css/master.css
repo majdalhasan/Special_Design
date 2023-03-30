@@ -359,8 +359,25 @@ body {
 .timeline .timeline-content .left {
   float: left;
 }
+.timeline .timeline-content .left::before {
+  right: -35px;
+}
 .timeline .timeline-content .right {
   float: right;
+}
+.timeline .timeline-content .right::before {
+  left: -35px;
+}
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
 }
 .timeline .timeline-content .content {
   padding: 20px;
@@ -375,6 +392,31 @@ body {
   color: #666;
   margin: 0;
   line-height: 1.6;
+}
+.clearfix {
+  clear: both;
+}
+.timeline .timeline-content .left .content::before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #fff;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+.timeline .timeline-content .right .content::before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #fff transparent transparent ;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  top: 20px;
 }
 /* End Timeline */
 /* Start Animation */
