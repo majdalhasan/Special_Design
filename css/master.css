@@ -419,6 +419,49 @@ body {
   top: 20px;
 }
 /* End Timeline */
+/* Start Features */
+.features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.features h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 60px;
+  text-align: center;
+}
+.features .feat-box {
+  width: calc(100% / 3);
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.features .feat-box img {
+  width: 96px;
+}
+.features .feat-box h4 {
+  font-size: 22px;
+  margin: 15px 0 40px;
+  position: relative;
+}
+.features .feat-box h4::before {
+  content: '';
+  width: 40px;
+  height: 4px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: -22px;
+}
+.features .feat-box p {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #706f6f;
+}
+/* End Features */
 /* Start Animation */
 @keyframes rotate {
   0% {
