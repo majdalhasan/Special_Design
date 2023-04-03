@@ -105,6 +105,34 @@ body {
   opacity: 1;
 }
 /* End Settings Box */
+/* Start Nav Bullets */
+.nav-bullets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  z-index: 1000;
+}
+.nav-bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--main-color);
+  margin: 10px auto;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.nav-bullets .bullet .tooltip {
+  background-color: var(--main-color);
+  width: 120px;
+  color: #fff;
+  padding: 4px 10px;
+  position: absolute;
+  right: 40px;
+  top: -6px;
+}
+/* End Nav Bullets */
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;
