@@ -292,16 +292,31 @@ document.addEventListener("click", function (e) {
 // Select All Bullets
 const allBullets = document.querySelectorAll(".nav-bullets .bullet");
 
-allBullets.forEach(bullet => {
 
-  bullet.addEventListener("click", (e) => {
+// Select All Links
+const allLinks = document.querySelectorAll(".links a");
+
+
+
+function scrollToSomeWare(elements) {
+
+elements.forEach(ele => {
+
+  ele.addEventListener("click", (e) => {
+
+    e.preventDefault();
 
     document.querySelector(e.target.dataset.section).scrollIntoView({
 
-      behavior: 'smooth'
+      behavior: "smooth"
 
     });
 
   });
 
 });
+
+}
+
+scrollToSomeWare(allBullets);
+scrollToSomeWare(allLinks);

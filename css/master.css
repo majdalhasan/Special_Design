@@ -23,6 +23,7 @@ body {
   z-index: 1000;
   min-height: 100vh;
   transition: 0.3s;
+  border: 1px solid #eee;
 }
 .settings-box.open {
   left: 0;
