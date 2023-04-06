@@ -88,10 +88,10 @@ body {
 .settings-box .option-box .colors-list li:nth-child(5) {
   background-color: #4CAF50;
 }
-.settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no {
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
   width: 50px;
-  background-color: #009688;
+  background-color: var(--main-color);
   color: white;
   margin-top: 10px;
   display: inline-block;
@@ -102,7 +102,7 @@ body {
   opacity: .5;
   cursor: pointer;
 }
-.settings-box .random-backgrounds span.active {
+.settings-box .option-box span.active {
   opacity: 1;
 }
 /* End Settings Box */
