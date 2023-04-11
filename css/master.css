@@ -673,6 +673,28 @@ body {
   transition: .3s;
 }
 /* End Contact us */
+/* Start Grid System */
+@media (min-width: 576px) { /*Small Devices => Landscape Phones*/
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) { /*Medium Devices => Tablets*/
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) { /*Desktops*/
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) { /*Large Screens*/
+  .container {
+    max-width: 1140px;
+  }
+}
+/* End Grid System */
 /* Start Animation */
 @keyframes rotate {
   0% {
