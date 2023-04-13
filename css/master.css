@@ -221,6 +221,16 @@ body {
   cursor: pointer;
   margin-top: 15px;
   display: none;
+  position: relative;
+}
+.header-area .toggle-menu::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
 }
 .header-area .toggle-menu:focus {
   outline: none;
@@ -256,7 +266,26 @@ body {
 }
 @media (max-width: 991px) {
   .header-area .links {
-    display: none;
+    display: block;
+  }
+  .header-area .links.open {
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: left;
+  }
+  .header-area .links.open li {
+    display: block;
+    margin: 10px;
+  }
+  .header-area .links.open li a {
+    color: var(--main-color);
+    font-weight: bold;
   }
   .header-area .toggle-menu {
     display: inline-block;
